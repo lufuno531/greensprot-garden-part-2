@@ -1,49 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>GreenSprout Community Garden – Home</title>
-<link rel="stylesheet" href="./css/style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GreenSprout Community Garden — Home</title>
+  <meta name="description" content="GreenSprout grows food, skills & community through workshops, seed libraries, and shared resources. Join our garden initiatives.">
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-<header> 
-    <!--navigation menu appears on every page for consitency-->
-<a class="logo" href="index.html">
-<img src="./assets/image.webp" alt="GreenSprout logo" />
-<span>GreenSprout</span>
-</a>
-<button class="hamburger" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-<nav>
-<a class="active" href="index.html">Home</a>
-<a href="./pages/about_us.html">About_us</a>
-<a href="./pages/products.html">Products</a>>
-<a href="./pages/Gallery.html">Gallery</a>
-<a href="./pages/Resources.html">Resources</a>
-<a href="./pages/Contact_us.html">Contact_us</a>
-</nav>
-</header>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html"><img src="./assets/logo.webp" alt="GreenSprout logo"><span>GreenSprout</span></a>
+      <button class="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="./pages/about_us.html">About</a>
+        <a href="./pages/products.html">Products</a>
+        <a href="./pages/Gallery.html">Gallery</a>
+        <a href="./pages/Resources.html">Resources</a>
+        <a href="./pages/Contact_us.html">Contact</a>
+        <a href="./pages/enquiry.html">Enquire</a>
+      </nav>
+    </div>
+  </header>
 
+  <main class="container">
+    <section class="hero card">
+      <h1>Growing food, skills & community</h1>
+      <p>GreenSprout supports households and schools to grow fresh food using sustainable, low-cost techniques. We run workshops, lend tools, and share seeds across the neighbourhood.</p>
 
-<main >
-    <!--welcome page-->
-<h1>welcome to greensprout community garden</h1>
-<p>We’re a non-profit helping households start sustainable gardens through free workshops, seed banks and shared tools. Join us to build greener, healthier neighbourhoods.</p>
-</section>
-<h2>gardens</h2>
-<img src="assets/feature.webp"alt="gardens" width= "300"><br>
+      <div class="cta-row">
+        <a class="btn" href="enquiry.html">Become a Volunteer</a>
+        <a class="btn secondary" href="products.html">Browse Products</a>
+      </div>
+    </section>
 
-<video width="260" controls>
-    <source src="assets/greensprout.mp4" type="video/mp4">
-</video>
+    <section class="section">
+      <h2 class="section-title">Our Impact (2021–2025)</h2>
+      <div class="grid" style="grid-template-columns:repeat(3,1fr);">
+        <div class="card" style="padding:1rem;">
+          <div class="card-content">
+            <div class="kicker">500+</div>
+            <div class="card-title">Households Trained</div>
+            <div class="card-desc small-text">We taught 500+ households to grow food using water-wise methods and composting.</div>
+          </div>
+        </div>
+        <div class="card" style="padding:1rem;">
+          <div class="card-content">
+            <div class="kicker">10,000+</div>
+            <div class="card-title">Seed Packets Distributed</div>
+            <div class="card-desc small-text">Our seed library has distributed thousands of packets of adapted seeds to neighbours.</div>
+          </div>
+        </div>
+        <div class="card" style="padding:1rem;">
+          <div class="card-content">
+            <div class="kicker">15</div>
+            <div class="card-title">School Partnerships</div>
+            <div class="card-desc small-text">We partner with local schools to deliver hands-on programmes and curriculum-linked gardens.</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="section">
+      <h2 class="section-title">Latest News</h2>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));">
+        <article class="card">
+          <img src="images/harvest1.png" alt="Harvest event">
+          <div class="card-content">
+            <h3 class="card-title">Community Harvest Day — Sep 2025</h3>
+            <p class="card-desc">Volunteers gathered to harvest and distribute produce to local food relief partners. Over 120kg donated.</p>
+            <div class="small-text">Read more on the Resources page.</div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/workshop1.png" alt="Workshop session">
+          <div class="card-content">
+            <h3 class="card-title">Water-wise Gardening Workshop</h3>
+            <p class="card-desc">Practical training on drip irrigation, mulching and native plant selection to conserve water.</p>
+            <div class="small-text">Upcoming: Oct 05, 2025 — book via Enquire.</div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-<footer>
-    <!--the footer-->
-<p>&copy; 2025 GreenSprout Community Garden Initiative. All rights reserved.</p>
-</footer>
+    <section class="section">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">How do I sign up as a volunteer?</button>
+        <div class="accordion-panel"><p>Complete the short form on the Enquire page selecting 'Volunteer Opportunities' and we will follow up with available dates and orientation details.</p></div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">Do you charge for workshops?</button>
+        <div class="accordion-panel"><p>Most community workshops are free. We accept small donations to cover materials; some specialist training may have a nominal fee.</p></div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">Can I donate tools or seeds?</button>
+        <div class="accordion-panel"><p>Yes — we welcome tool or seed donations. Use the Contact page to arrange drop-off or collection.</p></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      © 2025 GreenSprout Community Garden Initiative • Johannesburg • <a href="contact.html" style="color:rgba(255,255,255,.9);text-decoration:underline">Contact</a>
+    </div>
+  </footer>
+
+  <div class="lightbox"><img src="" alt="Preview"></div>
+  <script src="script.js"></script>
 </body>
 </html>
 

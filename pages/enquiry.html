@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Enquire — GreenSprout</title>
+  <meta name="description" content="Send an enquiry about products, volunteering, or sponsorship. We will respond with availability and next steps.">
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+     <a class="logo" href="../index.html"><img src="../assets/logo.webp" alt="logo"><span>GreenSprout</span></a>
+      <button class="hamburger" aria-label="Menu">☰</button>
+      <nav class="nav" aria-label="Main">
+        <a href="../index.html">Home</a>
+        <a href="./about_us.html">About</a>
+        <a href="./products.html">Products</a>
+        <a href="./Gallery.html">Gallery</a>
+        <a href="./Resources.html">Resources</a>
+        <a href="./Contact_us.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <h1>Make an Enquiry</h1>
+      <p>Select a subject and provide details. Once validated, we'll show an immediate availability/cost message (demo) and follow up by email.</p>
+    </section>
+
+    <section class="section">
+      <form class="needs-validation" data-enquiry="true" action="#" method="post" novalidate>
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject">
+          <option value="product">Product Availability</option>
+          <option value="volunteer">Volunteer Opportunities</option>
+          <option value="sponsor">Sponsorship</option>
+        </select>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" required />
+
+        <label for="message">Details</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <div class="form-feedback" style="min-height:1.2em;margin-top:.6rem;"></div>
+        <button type="submit" class="btn">Check Availability</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 GreenSprout Community Garden Initiative</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,63 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Our Products – GreenSprout Community Garden</title>
-<link rel="stylesheet" href="../css/style.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Products — GreenSprout</title>
+  <meta name="description" content="Shop GreenSprout: garden starter kits, compost bins, organic fertilizer and tool rentals to help start and maintain gardens.">
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-<header class="site-header">
-<a class="logo" href="index.html">
-<img src="../assets/image.webp" alt="GreenSprout logo" />
-<span>GreenSprout</span>
-</a>
-<nav>
-    <a href="../index.html">Home</a>
-    <a href="about_us.html">About</a>
-    <a href="products.html">Products</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="resources.html">Resources</a>
-    <a href="Contact_us.html">Contact</a>
+  <header class="site-header">
+    <div class="header-inner">
+     <a class="logo" href="../index.html"><img src="../assets/logo.webp" alt="logo"><span>GreenSprout</span></a>
+      <button class="hamburger" aria-label="Menu">☰</button>
+      <nav class="nav" aria-label="Main">
+        <a href="../index.html">Home</a>
+        <a href="./about_us.html">About</a>
+        <a href="./products.html">Products</a>
+        <a href="./Gallery.html">Gallery</a>
+        <a href="./Resources.html">Resources</a>
+        <a href="./Contact_us.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-</nav>
-</header>
+  <main class="container">
+    <section class="hero card">
+      <h1>Products & Services</h1>
+      <p>We offer beginner-friendly kits, compost solutions, organic fertilizers and a tool rental programme so everyone can start a productive garden.</p>
+    </section>
 
-
-<main>
-<h1>Our Products</h1>
-<section class="grid two">
-<article>
-<h2>Garden Starter Kits</h2>
-<p>Everything you need to begin your own food garden: seeds, compost, and a step-by-step guide.</p>
-</article>
-<article>
-<h2>Compost Bins</h2>
-<p>Eco-friendly compost bins designed for small spaces and easy use.</p>
-</article>
-<article>
-<h2>Organic Fertilizer</h2>
-<p>Locally produced organic compost to enrich your soil.</p>
-</article>
-<article>
-<h2>Tool Rentals</h2>
-<p>Borrow spades, hoes, watering cans and other essentials for your gardening journey.</p>
-</article>
-</section>
-</main>
-
-
-<footer class="site-footer">
-    <div class="container footer-inner">
-       <div class="social-icons" aria-hidden="false">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
-        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    <section class="section">
+      <h2 class="section-title">Browse our products</h2>
+      <div style="margin-bottom:.8rem;">
+        <input id="product-search" placeholder="Search products by name or tag..." style="padding:.7rem;width:100%;max-width:520px;border-radius:10px;border:1px solid #e8efe8" />
       </div>
-<p>&copy; 2025 GreenSprout Community Garden Initiative.</p>
-</footer>
+
+      <section class="grid products-grid" aria-live="polite">
+        <!-- Product card 1 -->
+        <article class="card product-card" data-tags="starter,seed,kit">
+          <img src="../assets/community.webp" alt="Garden Starter Kit">
+          <div class="card-content">
+            <div class="card-title">Garden Starter Kit</div>
+            <div class="card-desc">A curated kit with seasonal seeds, soil mix, easy-to-follow planting guide and small hand tools to get you started.</div>
+            <div class="card-footer">
+              <div class="price">R250</div>
+              <button class="btn" onclick="location.href='enquiry.html'">Enquire</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="card product-card" data-tags="compost,bin,eco">
+          <img src="images/product2.png" alt="Compost Bin">
+          <div class="card-content">
+            <div class="card-title">Compost Bin</div>
+            <div class="card-desc">Durable small-space compost bin with aeration vents and easy-empty access — ideal for urban gardens.</div>
+            <div class="card-footer">
+              <div class="price">R480</div>
+              <button class="btn" onclick="location.href='enquiry.html'">Reserve</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="card product-card" data-tags="fertilizer,organic,compost">
+          <img src="images/product3.png" alt="Organic Fertilizer">
+          <div class="card-content">
+            <div class="card-title">Organic Fertilizer (20kg)</div>
+            <div class="card-desc">Locally blended organic compost to enrich soil structure and boost yields.</div>
+            <div class="card-footer">
+              <div class="price">R150</div>
+              <button class="btn" onclick="location.href='enquiry.html'">Buy</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 4 -->
+        <article class="card product-card" data-tags="tools,rental,borrow">
+          <img src="images/product4.png" alt="Tool Rentals">
+          <div class="card-content">
+            <div class="card-title">Tool Rentals</div>
+            <div class="card-desc">Borrow spades, hoes and watering cans for garden days. Low-cost daily rental to reduce barrier to start gardening.</div>
+            <div class="card-footer">
+              <div class="price">R30/day</div>
+              <button class="btn" onclick="location.href='enquiry.html'">Book</button>
+            </div>
+          </div>
+        </article>
+      </section>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Customer Reviews</h2>
+      <div class="reviews">
+        <div class="review card"><strong>Thandi — 5 stars</strong><p class="small-text">The starter kit made it easy to begin. The seedlings grew quickly.</p></div>
+        <div class="review card"><strong>Sizwe — 4 stars</strong><p class="small-text">Great compost product, noticeable soil improvement.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">How to Order</h2>
+      <p class="small-text">Use the Enquire page to request availability or reserve a product. We will follow up by email with payment and collection/delivery details.</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 GreenSprout • Sustainable gardening made accessible.</div>
+  </footer>
+
+  <div class="lightbox"><img src="" alt="Preview"></div>
+  <script src="../js/script.js"></script>
 </body>
 </html>
 
