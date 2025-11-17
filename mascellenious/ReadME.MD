@@ -121,3 +121,46 @@ part 2
 This project is open-source and available under the MIT License. See [LICENSE](LICENSE) for more details.
 
 
+part 3 
+
+
+# GreenSprout Community Garden - Part 3 Build
+
+This build includes JavaScript interactivity, SEO improvements, forms with client-side validation, and gallery lightbox as required for Part 3.
+
+## What was added
+- JavaScript: hamburger menu, FAQ accordion, gallery lightbox, product search filter, form validation and feedback.
+- SEO: added title tags, meta descriptions, keywords, image alt attributes, robots.txt and sitemap.xml included.
+- Forms: contact.html and enquiry.html with client-side JS validation (demo responses).
+
+## Improvements from Part 2 Feedback
+| Feedback Issue | Improvement Implemented |
+|---|---|
+| Missing documentation of Part 2 fixes | Detailed changelog entries added to README |
+| Navigation inconsistency | Unified nav across pages; responsive hamburger menu implemented |
+| No pseudo-selectors | Added :hover, :focus, :active styles for interactive elements |
+| Responsive nav issues | Media queries added; mobile-friendly stacked nav with hamburger |
+| Typography spacing | Adjusted font sizes, padding and letter-spacing in CSS |
+| Missing references | References section added below |
+
+## Changelog (sample entries)
+- Added JS interactivity (hamburger, accordion, lightbox)
+- Implemented client-side validation for contact and enquiry forms
+- Added search filter for products and reviews section
+- Updated README with Part 3 documentation and commit examples
+
+## SEO files included
+- robots.txt
+- sitemap.xml
+
+## Commit Message Examples
+git commit -m "Add hamburger menu and responsive nav (Part 3)"
+git commit -m "Implement gallery lightbox and FAQ accordion"
+git commit -m "Add form validation and AJAX demo responses"
+
+---
+
+## References
+- MDN Web Docs – CSS and JavaScript guides
+- Leaflet / Google Maps docs (if implementing maps)
+- Course materials (WEDE5020 POE)

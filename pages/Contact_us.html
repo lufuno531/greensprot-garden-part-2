@@ -23,6 +23,8 @@
       </nav>
   </div>
 </header>
+
+
 <main class="container">
   <h1>Contact Us</h1>
   <address>
@@ -30,30 +32,35 @@
     Phone: <a href="tel:+27110000000">+27 11 000 0000</a><br>
     Email: <a href="mailto:hello@greensprout.org">hello@greensprout.org</a>
   </address>
-
+<iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3585.042513337663!2d28.047305!3d-26.204103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950bfbb3a51a5b%3A0xcca9b350c6e91b19!2sJohannesburg!5e0!3m2!1sen!2sza!4v1698000000000!5m2!1sen!2sza" 
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
   <section style="margin-top:1rem;">
     <h2 class="section-title">Send us a message</h2>
     <form class="needs-validation" action="#" method="post" novalidate>
       <label for="name">Name</label>
-      <input name="name" id="name" required style="padding:.6rem;width:100%;margin:.25rem 0;border-radius:8px;border:1px solid #ddd">
+      <input name="name" id="name" required style="padding:.6rem;width:100%;margin:.25rem 0;border-radius:8px;border:1px solid #313030">
 
       <label for="email">Email</label>
-      <input name="email" id="email" type="email" required style="padding:.6rem;width:100%;margin:.25rem 0;border-radius:8px;border:1px solid #ddd">
+      <input name="email" id="email" type="email" required style="padding:.6rem;width:100%;margin:.25rem 0;border-radius:8px;border:1px solid #181717">
 
       <label for="phone">Phone</label>
-      <input name="phone" id="phone" type="tel" required style="padding:.6rem;width:100%;margin:.25rem 0;border-radius:8px;border:1px solid #ddd">
+      <input name="phone" id="phone" type="tel" required style="padding:.6rem;width:100%;margin:.25rem 0;border-radius:8px;border:1px solid #1b1a1a">
 
       <label for="message">Message</label>
-      <textarea name="message" id="message" rows="6" required style="padding:.6rem;width:100%;margin:.25rem 0;border-radius:8px;border:1px solid #ddd"></textarea>
+      <textarea name="message" id="message" rows="6" required style="padding:.6rem;width:100%;margin:.25rem 0;border-radius:8px;border:1px solid #0e0d0d"></textarea>
 
       <div class="form-feedback" style="min-height:1.2em;margin:.5rem 0"></div>
-      <button type="submit" class="btn" style="background:var(--purple);color:white;padding:.6rem 1rem;border-radius:8px;border:0">Send</button>
+      <button type="submit" class="btn" style="background:var(--purple);color:rgb(20, 20, 20);padding:.6rem 1rem;border-radius:8px;border:0">Send</button>
     </form>
   </section>
 </main>
 <footer class="site-footer">
   <div class="container">© 2025 GreenSprout Community Garden Initiative</div>
+      <p class="date-display" id="auto-date"></p>
 </footer>
-<script src="script.js"></script>
+<script src="../js/script.js"></script>
 </body>
 </html>
