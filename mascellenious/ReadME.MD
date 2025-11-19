@@ -164,3 +164,10 @@ git commit -m "Add form validation and AJAX demo responses"
 - MDN Web Docs – CSS and JavaScript guides
 - Leaflet / Google Maps docs (if implementing maps)
 - Course materials (WEDE5020 POE)
+
+### **Version 1.1**  
+**Date**: [19 november 2025]  
+**Changes Based on Feedback:**
+- **Fixed Lightbox**: Resolved the issue where images were not displaying in the lightbox on the gallery page.
+- **Accordion Fixes**: Made sure the accordion works with smooth expansion and collapse of content.
+- **Contact Form**: Updated to open the user's email client when submitting, and added form validation.

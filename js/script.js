@@ -125,10 +125,26 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(updateDateTime, 1000);
   }
 });
+(function setupLightbox() {
+  const triggers = document.querySelectorAll('.lightbox-trigger');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = lightbox ? lightbox.querySelector('.lightbox-close') : null;
 
+  if (!triggers.length || !lightbox || !lightboxImg) return;
 
+  // Open handler
+  triggers.forEach(img => {
+    img.addEventListener('click', () => {
+      const large = img.getAttribute('data-large') || img.getAttribute('src'); // Fallback to src if data-large is missing
+      lightboxImg.src = large;
+      lightboxImg.alt = img.alt || 'Gallery image';
+      lightbox.style.display = 'flex';
+      lightbox.setAttribute('aria-hidden', 'false');
+      // Trap focus (simple)
+      lightbox.focus();
+      document.body.style.overflow = 'hidden'; // Disable scrolling when lightbox is open
+    });
+  });
 
-
-
-
-
+  
