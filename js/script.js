@@ -15,38 +15,65 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ---------- Accordion FAQ ---------- */
-  document.querySelectorAll('.accordion-button').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const panel = btn.nextElementSibling;
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
+ document.querySelectorAll('.accordion-button').forEach(button => {
+  button.addEventListener('click', () => {
+    const panel = button.nextElementSibling;
+    const isExpanded = button.getAttribute('aria-expanded') === 'true';
 
-      if (expanded) {
-        panel.style.maxHeight = null;
-        btn.setAttribute('aria-expanded', 'false');
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + 'px';
-        btn.setAttribute('aria-expanded', 'true');
-      }
+    // Toggle max-height for smooth expansion/collapse
+    if (isExpanded) {
+      panel.style.maxHeight = null;
+      button.setAttribute('aria-expanded', 'false');
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+      button.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+
+  /* ---------- Lightbox for gallery ---------- */
+  (function setupLightbox() {
+  const triggers = document.querySelectorAll('.lightbox-trigger');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = lightbox ? lightbox.querySelector('.lightbox-close') : null;
+
+  if (!triggers.length || !lightbox || !lightboxImg) return;
+
+  // Open handler
+  triggers.forEach(img => {
+    img.addEventListener('click', () => {
+      const large = img.getAttribute('data-large') || img.getAttribute('src');
+      lightboxImg.src = large;
+      lightboxImg.alt = img.alt || 'Gallery image';
+      lightbox.style.display = 'flex';
+      lightbox.setAttribute('aria-hidden', 'false');
+      // trap focus (simple)
+      lightbox.focus();
+      document.body.style.overflow = 'hidden';
     });
   });
 
-  /* ---------- Lightbox for gallery ---------- */
-  const galleryImgs = document.querySelectorAll(".gallery-img");
-  const lightbox = document.querySelector(".lightbox");
-  const lightboxImg = document.querySelector(".lightbox img");
-
-  if (lightbox) {
-    galleryImgs.forEach(img => {
-      img.addEventListener("click", () => {
-        lightbox.style.display = "flex";
-        lightboxImg.src = img.src;
-      });
-    });
-
-    lightbox.addEventListener("click", () => {
-      lightbox.style.display = "none";
-    });
+  // Close handlers
+  function closeLightbox() {
+    lightbox.style.display = 'none';
+    lightbox.setAttribute('aria-hidden', 'true');
+    lightboxImg.src = '';
+    document.body.style.overflow = '';
   }
+
+  lightbox.addEventListener('click', (e) => {
+    // close if click on backdrop or close button
+    if (e.target === lightbox || e.target === closeBtn) closeLightbox();
+  });
+
+  // close on ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.style.display === 'flex') closeLightbox();
+  });
+})();
+
 
   /* ---------- Contact Form ---------- */
   const contactForm = document.getElementById("contactForm");
@@ -68,6 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
       feedback.textContent = "Thank you for your enquiry. We will respond shortly.";
     });
   }
+
+   
 
   /* ---------- AUTO DATE + TIME ---------- */
   const autoDate = document.getElementById("auto-date");
