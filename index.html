@@ -10,8 +10,10 @@
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo" href="../index.html"><img src="../assets/logo.webp" alt="logo"><span>GreenSprout</span></a>
+      <a class="logo" href="../index.html"><img src="../assets/logo.webp" alt="Greensprout logo" style="height :48px; width:auto;">
+        <span>GreenSprout</span></a>
       <button class="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+
       <nav class="nav" aria-label="Main navigation">
         <a href="index.html" class="active">Home</a>
         <a href="./pages/about_us.html">About</a>
@@ -28,6 +30,13 @@
     <section class="hero card">
       <h1>Growing food, skills & community</h1>
       <p>GreenSprout supports households and schools to grow fresh food using sustainable, low-cost techniques. We run workshops, lend tools, and share seeds across the neighbourhood.</p>
+<div class="faq-item">
+    <button class="faq-question">What does GreenSprout do?</button>
+    <div class="faq-answer">
+        <p>GreenSprout focuses on community gardening, sustainable growth, and education.</p>
+    </div>
+</div>
+
 
       <div class="cta-row">
         <a class="btn" href="./pages/enquiry.html">Become a Volunteer</a>
@@ -106,15 +115,25 @@
 
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      © 2025 GreenSprout Community Garden Initiative • Johannesburg • <a href="./pages/Contact_us.html" style="color:rgba(255,255,255,.9);text-decoration:underline">Contact</a>
-    </div>
-        <p class="date-display" id="auto-date"></p>
-  </footer>
+  
+      
+    <!-- FOOTER -->
 
-  <div class="lightbox"><img src="" alt="Preview"></div>
+  <footer class="footer">
+<p>&copy; 2025 GreenSprout Community Garden Initiative • Johannesburg • 
+  <a href="./pages/Contact_us.html" style="color:rgba(38, 97, 20, 0.9);text-decoration:underline">Contact</a>
+</p>
+<p id="auto-date"></p>
+
+</footer>
+
+<!-- LIGHTBOX (global) -->
+<div class="lightbox" role="dialog" aria-hidden="true">
+  <img src="" alt="">
+</div>
   <script src="./js/script.js"></script>
+  
+  </footer>
 </body>
 </html>
 

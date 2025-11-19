@@ -1,19 +1,31 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Enquire — GreenSprout</title>
-  <meta name="description" content="Send an enquiry about products, volunteering, or sponsorship. We will respond with availability and next steps.">
-<link rel="stylesheet" href="../css/style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Enquiries — GreenSprout Community Garden</title>
+
+  <meta name="description" content="Submit an enquiry for GreenSprout services, products, volunteering or sponsorship opportunities.">
+  <meta name="keywords" content="GreenSprout enquiry, volunteer form, sponsor, products enquiry, garden services">
+
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-     <a class="logo" href="../index.html"><img src="../assets/logo.webp" alt="logo"><span>GreenSprout</span></a>
-      <button class="hamburger" aria-label="Menu">☰</button>
-      <nav class="nav" aria-label="Main">
-        <a href="../index.html">Home</a>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner container">
+    <a class="logo" href="index.html">
+      <a class="logo" href="../index.html"><img src="../assets/logo.webp" alt="Greensprout logo" style="height :48px; width:auto;">
+      <span>GreenSprout</span>
+    </a>
+
+    <button class="hamburger" aria-label="Toggle navigation">☰</button>
+
+    <nav class="nav">
+         <a href="../index.html">Home</a>
         <a href="./about_us.html">About</a>
         <a href="./products.html">Products</a>
         <a href="./Gallery.html">Gallery</a>
@@ -21,45 +33,65 @@
          <a href="./enquiry.html">enquiry</a>
         <a href="./Contact_us.html">Contact</a>
       </nav>
-    </div>
-  </header>
+  </div>
+</header>
 
+<!-- MAIN -->
+<main class="container">
 
-  <main class="container">
-    <section class="hero card">
-      <h1>Make an Enquiry</h1>
-      <p>Select a subject and provide details. Once validated, we'll show an immediate availability/cost message (demo) and follow up by email.</p>
-    </section>
+  <!-- INTRO -->
+  <section class="section card">
+    <h1>Submit an Enquiry</h1>
+    <p>
+      Use this form to enquire about our products, services, volunteering opportunities, 
+      or sponsorship options. Once your information is validated, a personalised response 
+      will be generated automatically.
+    </p>
+  </section>
 
-    <section class="section">
-      <form class="needs-validation" data-enquiry="true" action="#" method="post" novalidate>
-        <label for="subject">Subject</label>
-        <select id="subject" name="subject">
-          <option value="product">Product Availability</option>
-          <option value="volunteer">Volunteer Opportunities</option>
-          <option value="sponsor">Sponsorship</option>
-        </select>
+  <!-- ENQUIRY FORM -->
+  <section class="section">
+    <h2 class="section-title">Enquiry Form</h2>
 
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required />
+    <form id="enquiryForm" class="card" style="padding:1.5rem;">
 
-        <label for="phone">Phone</label>
-        <input id="phone" name="phone" type="tel" required />
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName" required placeholder="Your name">
 
-        <label for="message">Details</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required placeholder="example@email.com">
 
-        <div class="form-feedback" style="min-height:1.2em;margin-top:.6rem;"></div>
-        <button type="submit" class="btn">Check Availability</button>
-      </form>
-    </section>
-  </main>
+      <label for="enquiryType">Enquiry Type</label>
+      <select id="enquiryType" name="enquiryType" required>
+        <option value="">-- Select --</option>
+        <option value="product">Product Enquiry</option>
+        <option value="service">Service / Workshop Enquiry</option>
+        <option value="volunteer">Volunteer Signup</option>
+        <option value="sponsor">Sponsor / Donation</option>
+      </select>
 
-  <footer class="site-footer">
-    <div class="container">© 2025 GreenSprout Community Garden Initiative</div>
-        <p class="date-display" id="auto-date"></p>
-  </footer>
+      <label for="details">Additional Details</label>
+      <textarea id="details" name="details" rows="4" required placeholder="Tell us what you need..."></textarea>
 
-  <script src="../js/script.js"></script>
+      <button type="submit" class="btn" style="margin-top:1rem;">Submit Enquiry</button>
+
+    </form>
+
+    
+
+<!-- FOOTER -->
+<footer class="footer">
+</p>&copy; 2025 GreenSprout Community Garden Initiative • Johannesburg • <a href="./pages/Contact_us.html" style="color:rgba(38, 97, 20, 0.9);text-decoration:underline">Contact</a>
+</p>
+ <p class="date-display" id="auto-date"></p>
+</footer>
+
+<!-- LIGHTBOX (global) -->
+<div class="lightbox" role="dialog" aria-hidden="true">
+  <img src="" alt="">
+</div>
+
+<script src="../js/script.js"></script>
+
 </body>
 </html>
